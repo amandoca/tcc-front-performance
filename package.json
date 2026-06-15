@@ -1,0 +1,19 @@
+{
+  "name": "tcc-front-performance",
+  "version": "1.0.0",
+  "description": "Protótipo experimental para comparação de desempenho front-end",
+  "scripts": {
+    "build:a": "gulp buildA",
+    "build:b": "gulp buildB",
+    "build": "gulp build",
+    "start": "docker compose up"
+  },
+  "devDependencies": {
+    "gulp": "4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-replace": "^1.1.4",
+    "gulp-terser": "^2.1.0",
+    "sharp": "^0.33.5"
+  }
+}

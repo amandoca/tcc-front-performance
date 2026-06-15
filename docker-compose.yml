@@ -1,0 +1,16 @@
+services:
+  app-a:
+    image: nginx:alpine
+    container_name: tcc-app-a
+    ports:
+      - "8081:80"
+    volumes:
+      - ./dist-a:/usr/share/nginx/html:ro
+
+  app-b:
+    image: nginx:alpine
+    container_name: tcc-app-b
+    ports:
+      - "8082:80"
+    volumes:
+      - ./dist-b:/usr/share/nginx/html:ro
