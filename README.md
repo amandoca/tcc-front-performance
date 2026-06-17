@@ -10,8 +10,8 @@ Avaliar o impacto de técnicas de otimização front-end sobre métricas de dese
 
 Foram comparadas duas versões equivalentes de uma loja experimental de produtos:
 
-- **Versão A (`dist-a`)**: versão controle, com imagens JPG originais e arquivos não minificados.
-- **Versão B (`dist-b`)**: versão otimizada, com imagens WebP, compressão, redimensionamento, lazy loading e minificação de HTML, CSS e JavaScript.
+* **Versão A (`dist-a`)**: versão controle, com imagens JPG originais e arquivos não minificados.
+* **Versão B (`dist-b`)**: versão otimizada, com imagens WebP, compressão, redimensionamento, lazy loading e minificação de HTML, CSS e JavaScript.
 
 ## Estrutura do projeto
 
@@ -29,15 +29,15 @@ Foram comparadas duas versões equivalentes de uma loja experimental de produtos
 
 ## Tecnologias utilizadas
 
-- HTML
-- CSS
-- JavaScript
-- Node.js
-- Gulp
-- Sharp
-- Docker
-- Nginx
-- Lighthouse
+* HTML
+* CSS
+* JavaScript
+* Node.js
+* Gulp
+* Sharp
+* Docker
+* Nginx
+* Lighthouse
 
 ## Como executar
 
@@ -61,8 +61,8 @@ npm start
 
 Acesse:
 
-- Versão A: `http://localhost:8081`
-- Versão B: `http://localhost:8082`
+* Versão A: `http://localhost:8081`
+* Versão B: `http://localhost:8082`
 
 ## Scripts disponíveis
 
@@ -92,14 +92,14 @@ Executa as duas versões com Docker e Nginx.
 
 ## Otimizações aplicadas na versão B
 
-- Conversão de imagens JPG para WebP.
-- Redimensionamento de imagens.
-- Compressão de imagens.
-- Uso de `loading="lazy"`.
-- Uso de `decoding="async"`.
-- Minificação de HTML.
-- Minificação de CSS.
-- Minificação de JavaScript.
+* Conversão de imagens JPG para WebP.
+* Redimensionamento de imagens.
+* Compressão de imagens.
+* Uso de `loading="lazy"`.
+* Uso de `decoding="async"`.
+* Minificação de HTML.
+* Minificação de CSS.
+* Minificação de JavaScript.
 
 ## Coleta Lighthouse
 
@@ -109,16 +109,16 @@ Foram feitas cinco execuções para cada versão em guia anônima.
 
 Resumo dos resultados preliminares:
 
-| Métrica | Versão A | Versão B | Resultado |
-|---|---:|---:|---|
-| Performance Score médio | 33,8 | 82,0 | melhora de aproximadamente 142,6% |
-| FCP médio | 0,20 s | 0,20 s | sem variação relevante |
-| LCP médio | 12,46 s | 0,31 s | melhora de aproximadamente 97,5% |
-| Speed Index médio | 0,28 s | 0,20 s | melhora de aproximadamente 29,6% |
-| TBT médio | 996,65 ms | 0 ms | redução de 100% |
-| CLS médio | 0,376 | 0,376 | sem variação |
-| Requisições da aplicação | 17 | 17 | sem variação |
-| Tamanho total | 36.468,65 KiB | 435,08 KiB | redução de aproximadamente 98,8% |
+| Métrica                  |      Versão A |   Versão B | Resultado                        |
+| ------------------------ | ------------: | ---------: | -------------------------------- |
+| Performance Score médio  |          33,8 |       82,0 | ganho de +48,2 pontos            |
+| FCP médio                |        0,20 s |     0,20 s | sem variação relevante           |
+| LCP médio                |       12,46 s |     0,31 s | melhora de aproximadamente 97,5% |
+| Speed Index médio        |        0,28 s |     0,20 s | melhora de aproximadamente 29,6% |
+| TBT médio                |     996,65 ms |       0 ms | redução de 100%                  |
+| CLS médio                |         0,376 |      0,376 | sem variação; valor ainda ruim   |
+| Requisições da aplicação |            17 |         17 | sem variação                     |
+| Tamanho total            | 36.468,65 KiB | 435,08 KiB | redução de aproximadamente 98,8% |
 
 O relatório completo está em [`results/coleta-lighthouse.md`](results/coleta-lighthouse.md).
 
@@ -126,7 +126,8 @@ O relatório completo está em [`results/coleta-lighthouse.md`](results/coleta-l
 
 Os resultados indicam que a versão otimizada reduziu drasticamente o peso dos recursos carregados e melhorou métricas importantes de desempenho, principalmente LCP, TBT, Speed Index e Performance Score.
 
+O Performance Score médio teve ganho de 48,2 pontos, passando de 33,8 na versão A para 82,0 na versão B. Como o Performance Score do Lighthouse é uma escala ponderada de 0 a 100, a comparação foi tratada como ganho absoluto de pontos, e não como variação percentual simples.
+
 A quantidade de requisições permaneceu igual nas duas versões. Portanto, o principal ganho observado não veio da redução de requisições, mas da redução do tamanho dos arquivos carregados.
 
 O CLS permaneceu alto e igual nas duas versões, sendo uma limitação identificada para melhoria futura.
-
