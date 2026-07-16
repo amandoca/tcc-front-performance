@@ -56,7 +56,7 @@ npm run build
 Suba os contêineres:
 
 ```bash
-npm start
+docker-compose up
 ```
 
 Acesse:
