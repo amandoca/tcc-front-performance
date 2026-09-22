@@ -1,0 +1,2 @@
+/tcc-app-a /home/amanda/Documentos/ESALQ/tcc-front-performance/dist-a -> /usr/share/nginx/html ro
+/tcc-app-b /home/amanda/Documentos/ESALQ/tcc-front-performance/dist-b -> /usr/share/nginx/html ro

@@ -1,0 +1,4 @@
+de57aa2 (HEAD -> main, origin/main) readme: change to docker
+edf1c66 docs: atualiza resumo dos resultados preliminares
+e72674c Adiciona README do experimento
+dd3839d Versao inicial do experimento front-end performance
