@@ -1,52 +1,25 @@
-# Ambiente de coleta final
+# Ambiente da coleta final — TCC v1
 
-## Computador
+## Evidência dos 20 relatórios JSON
 
-- Sistema operacional: Ubuntu 24.04.5 LTS (noble), Linux 7.0.0-31-generic, x86_64
-- Processador: 12th Gen Intel(R) Core(TM) i5-1235U
-- CPUs logicas: 12
-- Nucleos fisicos reportados: 10
-- Threads por nucleo: 2
-- RAM total: 15 GiB
-- Swap total: 4.0 GiB
+- Sessão: 22/09/2026, 02:35:11–02:41:57, horário de Brasília (UTC−03).
+- Lighthouse: 13.4.1; canal `devtools`; perfil `desktop`; coleta Navigation conforme o TCC v1.
+- Chrome do host: 153.0.0.0; Linux x86_64, conforme `environment.hostUserAgent`.
+- URLs: A em `http://localhost:8081/`; B em `http://localhost:8082/`.
+- Throttling: `simulate`, `rttMs: 40`, `throughputKbps: 10240`, `cpuSlowdownMultiplier: 1`.
+- `disableStorageReset: false`; `screenEmulation.disabled: true`. As dimensões presentes no objeto de emulação não comprovam o viewport efetivo, pois a emulação estava desabilitada.
+- Os relatórios contêm outras categorias; esta análise utiliza desempenho e dados de rede.
 
-## Ferramentas
+## Informações complementares do ambiente
 
-- Google Chrome: 153.0.8010.36
-- Lighthouse: 13.4.1, verificado no relatorio diagnostico local `diagnostics/cls-20260922/lighthouse-a-diagnostic.report.json`
-- Lighthouse do painel DevTools: pendente; nao foi possivel verificar por comando local sem abrir o DevTools
-- Node.js: v18.19.1
-- npm: 10.9.0
-- Docker: Docker version 29.1.3, build 29.1.3-0ubuntu3~24.04.2
-- Docker Compose: Docker Compose version 2.40.3+ds1-0ubuntu1~24.04.1
-- Nginx no host: pendente; comando `nginx -v` nao encontrado no host
-- Nginx no conteiner A (`tcc-app-a`): nginx/1.31.1
-- Nginx no conteiner B (`tcc-app-b`): nginx/1.31.1
-- Imagem dos conteineres A e B: `nginx:alpine`
+O registro local anterior informa Ubuntu 24.04.5 LTS, Intel Core i5-1235U, 15 GiB de RAM reportados pelo sistema, Chrome instalado 153.0.8010.36, Docker 29.1.3, Compose 2.40.3 e Nginx 1.31.1 nos contêineres `nginx:alpine`. O TCC descreve 16,0 GiB de memória. As duas formas de registro são mantidas explícitas; os JSONs não informam a capacidade física de RAM.
 
-## Projeto
+Consulte o [registro original](historico/ambiente-registro-inicial.md) para a proveniência. Suas referências a commit e alterações pendentes descrevem o momento daquele registro, não o estado final do repositório.
 
-- Repositorio local: `/home/amanda/Documentos/ESALQ/tcc-front-performance`
-- Branch atual: `fix/reserva-espaco-products-cls`
-- Commit atual: `de57aa259f6973cab5aaaff146fa603b97ec4c54`
+## Código e dados
 
-## Alteracoes ainda nao commitadas
-
-Saida de `git status --short` no momento do registro:
-
-```text
- M dist-a/styles/main.css
- M dist-b/styles/main.css
- M src/styles/main.css
-?? diagnostics/
-```
-
-Observacao: este arquivo `results/ambiente-coleta-final.md` tambem passa a ser uma alteracao nao commitada apos sua criacao.
-
-## Hashes SHA-256 dos CSS
-
-```text
-5b042740f9c5bae478e08953519849767ada24480786bf311d226f6cbf71fd91  src/styles/main.css
-5b042740f9c5bae478e08953519849767ada24480786bf311d226f6cbf71fd91  dist-a/styles/main.css
-2e793c2613a15e86e1580f07f6293523d2992fdb90f2ae137dc5c58ed31907f0  dist-b/styles/main.css
-```
+- Correção comum da grade de produtos: commit `c1b573d`, aplicado a `src`, `dist-a` e `dist-b`.
+- A consolidação da v1 não altera nem regenera os builds medidos.
+- Amostra final: [coleta-final/](coleta-final/); integridade dos arquivos em [SHA256SUMS](coleta-final/SHA256SUMS).
+- Resultados: [coleta-final.md](coleta-final.md).
+- A tag `tcc-v1` identifica o estado consolidado do código, dos dados e desta documentação. Os JSONs não registram o commit Git servido durante a sessão; a associação ao código baseia-se no registro de trabalho e na descrição metodológica da v1.

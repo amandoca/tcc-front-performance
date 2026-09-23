@@ -2,7 +2,7 @@
 
 Protótipo experimental para comparar o desempenho front-end de duas versões da mesma aplicação web.
 
-O projeto faz parte do TCC **"Otimização de Recursos Front-End e Desempenho de Aplicações Web: Um Experimento Controlado"**.
+O projeto faz parte do TCC **"Desempenho de uma aplicação web mediante otimizações de recursos front-end"**.
 
 ## Objetivo
 
@@ -10,7 +10,7 @@ Avaliar o impacto de técnicas de otimização front-end sobre métricas de dese
 
 Foram comparadas duas versões equivalentes de uma loja experimental de produtos:
 
-* **Versão A (`dist-a`)**: versão controle, com imagens JPG originais e arquivos não minificados.
+* **Versão A (`dist-a`)**: versão de referência, com imagens JPG originais e arquivos não minificados.
 * **Versão B (`dist-b`)**: versão otimizada, com imagens WebP, compressão, redimensionamento, lazy loading e minificação de HTML, CSS e JavaScript.
 
 ## Estrutura do projeto
@@ -56,7 +56,7 @@ npm run build
 Suba os contêineres:
 
 ```bash
-docker-compose up
+docker compose up
 ```
 
 Acesse:
@@ -101,33 +101,29 @@ Executa as duas versões com Docker e Nginx.
 * Minificação de CSS.
 * Minificação de JavaScript.
 
-## Coleta Lighthouse
+## Coleta final — TCC v1
 
-A coleta foi realizada com Lighthouse 13.2.0 no Chrome/Chromium, em modo Navigation, perfil Desktop e categoria Performance.
+Estudo de caso com análise quantitativa e descritiva de um catálogo de 12 produtos. As otimizações foram avaliadas em conjunto, sem separar o efeito de cada técnica.
 
-Foram feitas cinco execuções para cada versão em guia anônima.
+Foram realizadas dez execuções por versão com Lighthouse 13.4.1 no painel DevTools do Chrome 153, perfil Desktop, em 22/09/2026. A foi medida primeiro, seguida de B, no mesmo computador. As duas versões receberam a mesma reserva de espaço na grade de produtos antes das medições.
 
-Resumo dos resultados preliminares:
+| Métrica (média) | Versão A | Versão B |
+| --- | ---: | ---: |
+| Score (pontos) | 46,400 | 100,000 |
+| FCP (ms) | 200,669 | 212,700 |
+| LCP (ms) | 9.988,669 | 376,635 |
+| Speed Index (ms) | 424,425 | 235,479 |
+| TBT (ms) | 1.694,400 | 9,434 |
+| CLS | 0,000 | 0,000 |
+| Requisições | 17,000 | 17,000 |
+| Volume (MB) | 37,344 | 0,446 |
 
-| Métrica                  |      Versão A |   Versão B | Resultado                        |
-| ------------------------ | ------------: | ---------: | -------------------------------- |
-| Performance Score médio  |          33,8 |       82,0 | ganho de +48,2 pontos            |
-| FCP médio                |        0,20 s |     0,20 s | sem variação relevante           |
-| LCP médio                |       12,46 s |     0,31 s | melhora de aproximadamente 97,5% |
-| Speed Index médio        |        0,28 s |     0,20 s | melhora de aproximadamente 29,6% |
-| TBT médio                |     996,65 ms |       0 ms | redução de 100%                  |
-| CLS médio                |         0,376 |      0,376 | sem variação; valor ainda ruim   |
-| Requisições da aplicação |            17 |         17 | sem variação                     |
-| Tamanho total            | 36.468,65 KiB | 435,08 KiB | redução de aproximadamente 98,8% |
+O score aumentou 53,6 pontos; o LCP caiu 96,23% e o volume transferido, 98,81%. O FCP aumentou ligeiramente. O CLS permaneceu zero em ambas as versões; esse resultado não é efeito exclusivo das otimizações de B. As conclusões se restringem ao caso e ao ambiente medido, sem testes de significância estatística.
 
-O relatório completo está em [`results/coleta-lighthouse.md`](results/coleta-lighthouse.md).
+- [Resultados finais e valores individuais](results/coleta-final.md)
+- [Relatórios JSON da amostra final](results/coleta-final/)
+- [Ambiente e rastreabilidade](results/ambiente-coleta-final.md)
+- [Coletas e diagnósticos históricos](results/historico/README.md)
+- [Texto do TCC v1](https://docs.google.com/document/d/1lwaUtnISOknhoAuN6STcu7QRu0l05NpbfSGWZ2daqjA/edit)
 
-## Interpretação preliminar
-
-Os resultados indicam que a versão otimizada reduziu drasticamente o peso dos recursos carregados e melhorou métricas importantes de desempenho, principalmente LCP, TBT, Speed Index e Performance Score.
-
-O Performance Score médio teve ganho de 48,2 pontos, passando de 33,8 na versão A para 82,0 na versão B. Como o Performance Score do Lighthouse é uma escala ponderada de 0 a 100, a comparação foi tratada como ganho absoluto de pontos, e não como variação percentual simples.
-
-A quantidade de requisições permaneceu igual nas duas versões. Portanto, o principal ganho observado não veio da redução de requisições, mas da redução do tamanho dos arquivos carregados.
-
-O CLS permaneceu alto e igual nas duas versões, sendo uma limitação identificada para melhoria futura.
+A tag `tcc-v1` marca o código e os dados consolidados para essa versão do trabalho. O Google Docs permanece editável e pode evoluir após essa marcação.

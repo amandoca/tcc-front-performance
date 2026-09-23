@@ -1,5 +1,7 @@
 # Coleta piloto - Lighthouse
 
+> Histórico: estes resultados não integram a amostra final da v1. Consulte [os resultados finais](coleta-final.md).
+
 ## Ambiente de coleta
 
 * Data da coleta: 15/06/2026, entre 03h37 e 03h42 aproximadamente, no horário de Brasília.

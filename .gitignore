@@ -2,3 +2,6 @@ node_modules/
 .DS_Store
 .env
 *.log
+
+# Arquivo local de transporte; os JSONs estão versionados em results/coleta-final/
+/novas-10-coletas-cada.zip
