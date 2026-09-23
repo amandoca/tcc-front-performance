@@ -1,6 +1,6 @@
 # TCC Front Performance
 
-Protótipo experimental para comparar o desempenho front-end de duas versões da mesma aplicação web.
+Protótipo para comparar o desempenho front-end de duas versões da mesma aplicação web.
 
 O projeto faz parte do TCC **"Desempenho de uma aplicação web mediante otimizações de recursos front-end"**.
 
@@ -8,7 +8,7 @@ O projeto faz parte do TCC **"Desempenho de uma aplicação web mediante otimiza
 
 Avaliar o impacto de técnicas de otimização front-end sobre métricas de desempenho medidas com Lighthouse.
 
-Foram comparadas duas versões equivalentes de uma loja experimental de produtos:
+Foram comparadas duas versões equivalentes de um catálogo de produtos:
 
 * **Versão A (`dist-a`)**: versão de referência, com imagens JPG originais e arquivos não minificados.
 * **Versão B (`dist-b`)**: versão otimizada, com imagens WebP, compressão, redimensionamento, lazy loading e minificação de HTML, CSS e JavaScript.

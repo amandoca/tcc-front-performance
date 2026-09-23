@@ -1,7 +1,7 @@
 {
   "name": "tcc-front-performance",
   "version": "1.0.0",
-  "description": "Protótipo experimental para comparação de desempenho front-end",
+  "description": "Protótipo para comparação de desempenho front-end",
   "scripts": {
     "build:a": "gulp buildA",
     "build:b": "gulp buildB",

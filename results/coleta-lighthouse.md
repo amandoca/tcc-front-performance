@@ -101,6 +101,6 @@ O FCP apresentou valores praticamente iguais nas duas versões, sugerindo que o 
 
 A quantidade de requisições não apresentou redução. Tanto a versão A quanto a versão B carregaram 17 requisições da aplicação. Portanto, a conclusão correta desta coleta não é que a versão B reduziu o número de requisições, mas sim que ela reduziu drasticamente o peso dos recursos carregados.
 
-O CLS permaneceu igual nas duas versões, com valor médio de 0,376. Isso indica que as otimizações aplicadas foram eficazes para reduzir peso, LCP, Speed Index, TBT e Performance Score, mas não resolveram a estabilidade visual da página. Esse ponto deve ser considerado como uma limitação do experimento e como possibilidade de melhoria futura.
+O CLS permaneceu igual nas duas versões, com valor médio de 0,376. Isso indica que as otimizações aplicadas foram eficazes para reduzir peso, LCP, Speed Index, TBT e Performance Score, mas não resolveram a estabilidade visual da página. Esse ponto deve ser considerado como uma limitação do estudo e como possibilidade de melhoria futura.
 
-Esses resultados ainda são preliminares, mas indicam que o experimento está funcionando e que as otimizações aplicadas na versão B contribuíram para reduzir o peso dos recursos e melhorar métricas importantes de desempenho front-end, especialmente LCP, TBT, Speed Index e Performance Score.
+Esses resultados ainda são preliminares, mas indicam a viabilidade do procedimento de comparação e que as otimizações aplicadas na versão B contribuíram para reduzir o peso dos recursos e melhorar métricas importantes de desempenho front-end, especialmente LCP, TBT, Speed Index e Performance Score.
