@@ -1,4 +1,4 @@
-# Coleta final — TCC v1
+# Coleta final - TCC v1
 
 Amostra exclusiva: os 20 JSONs em [coleta-final/](coleta-final/), dez por versão. Sessão de 22/09/2026, das 02:35:11 às 02:41:57 (America/Sao_Paulo; 05:35:11–05:41:57 UTC). A foi medida primeiro, seguida de B; a sequência não foi alternada nem sorteada.
 

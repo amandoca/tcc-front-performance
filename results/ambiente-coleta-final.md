@@ -1,4 +1,4 @@
-# Ambiente da coleta final — TCC v1
+# Ambiente da coleta final - TCC v1
 
 ## Evidência dos 20 relatórios JSON
 

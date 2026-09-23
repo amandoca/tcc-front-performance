@@ -101,7 +101,7 @@ Executa as duas versões com Docker e Nginx.
 * Minificação de CSS.
 * Minificação de JavaScript.
 
-## Coleta final — TCC v1
+## Coleta final - TCC v1
 
 Estudo de caso com análise quantitativa e descritiva de um catálogo de 12 produtos. As otimizações foram avaliadas em conjunto, sem separar o efeito de cada técnica.
 
