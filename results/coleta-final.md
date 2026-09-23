@@ -1,6 +1,6 @@
 # Coleta final - TCC v1
 
-Amostra exclusiva: os 20 JSONs em [coleta-final/](coleta-final/), dez por versão. Sessão de 22/09/2026, das 02:35:11 às 02:41:57 (America/Sao_Paulo; 05:35:11–05:41:57 UTC). A foi medida primeiro, seguida de B; a sequência não foi alternada nem sorteada.
+Amostra exclusiva: os 20 JSONs em [coleta-final/](coleta-final/), dez por versão. As medições ocorreram em uma única sessão de aproximadamente sete minutos. A foi medida primeiro, seguida de B; a sequência não foi alternada nem sorteada.
 
 Os relatórios anteriores e o diagnóstico são [históricos](historico/README.md) e não entram nestes cálculos. Não foram identificados timestamps duplicados, erros de execução ou avisos nos 20 relatórios. Todas as execuções foram incluídas.
 

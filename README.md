@@ -105,7 +105,7 @@ Executa as duas versões com Docker e Nginx.
 
 Estudo de caso com análise quantitativa e descritiva de um catálogo de 12 produtos. As otimizações foram avaliadas em conjunto, sem separar o efeito de cada técnica.
 
-Foram realizadas dez execuções por versão com Lighthouse 13.4.1 no painel DevTools do Chrome 153, perfil Desktop, em 22/09/2026. A foi medida primeiro, seguida de B, no mesmo computador. As duas versões receberam a mesma reserva de espaço na grade de produtos antes das medições.
+Foram realizadas dez execuções por versão com Lighthouse 13.4.1 no painel DevTools do Chrome 153, perfil Desktop. A foi medida primeiro, seguida de B, no mesmo computador. As duas versões receberam a mesma reserva de espaço na grade de produtos antes das medições.
 
 | Métrica (média) | Versão A | Versão B |
 | --- | ---: | ---: |

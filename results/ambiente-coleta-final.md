@@ -2,7 +2,7 @@
 
 ## Evidência dos 20 relatórios JSON
 
-- Sessão: 22/09/2026, 02:35:11–02:41:57, horário de Brasília (UTC−03).
+- Sessão única de aproximadamente sete minutos, com dez execuções por versão.
 - Lighthouse: 13.4.1; canal `devtools`; perfil `desktop`; coleta Navigation conforme o TCC v1.
 - Chrome do host: 153.0.0.0; Linux x86_64, conforme `environment.hostUserAgent`.
 - URLs: A em `http://localhost:8081/`; B em `http://localhost:8082/`.
